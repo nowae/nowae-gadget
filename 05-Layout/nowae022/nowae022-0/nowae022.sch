@@ -7,12 +7,12 @@ encoding utf-8
 Sheet 1 1
 Title "Christmas Tree Ball #1"
 Date ""
-Rev "0-D"
+Rev "0"
 Comp ""
 Comment1 "M. Giammarini"
 Comment2 "N. Orlandini"
 Comment3 "N. Orlandini"
-Comment4 ""
+Comment4 "2018-11-22"
 $EndDescr
 $Comp
 L nowae-microcontroller:MKL15Z128VFM4 U1
