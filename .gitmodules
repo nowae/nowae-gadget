@@ -1,0 +1,3 @@
+[submodule "06-Firmware/ChristmasTreeBall_kl15_mcux/source/libohiboard"]
+	path = 06-Firmware/ChristmasTreeBall_kl15_mcux/source/libohiboard
+	url = https://github.com/ohilab/libohiboard.git
