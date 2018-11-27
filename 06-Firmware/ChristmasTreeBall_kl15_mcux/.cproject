@@ -77,6 +77,7 @@
 									<listOptionValue builtIn="false" value="__MCUXPRESSO"/>
 									<listOptionValue builtIn="false" value="__USE_CMSIS"/>
 									<listOptionValue builtIn="false" value="DEBUG"/>
+									<listOptionValue builtIn="false" value="LIBOHIBOARD_MKL15ZxFM"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.undef.symbol.163004807" name="Undefined symbols (-U)" superClass="gnu.c.compiler.option.preprocessor.undef.symbol"/>
 								<option id="gnu.c.compiler.option.include.paths.486670965" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
@@ -85,6 +86,7 @@
 									<listOptionValue builtIn="false" value="../"/>
 									<listOptionValue builtIn="false" value="../startup"/>
 									<listOptionValue builtIn="false" value="../CMSIS"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/source/libohiboard/include&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.include.files.151001607" name="Include files (-include)" superClass="gnu.c.compiler.option.include.files"/>
 								<option id="com.crt.advproject.gcc.exe.debug.option.optimization.level.1438635209" name="Optimization Level" superClass="com.crt.advproject.gcc.exe.debug.option.optimization.level"/>
@@ -126,6 +128,7 @@
 									<listOptionValue builtIn="false" value="../"/>
 									<listOptionValue builtIn="false" value="../startup"/>
 									<listOptionValue builtIn="false" value="../CMSIS"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Src/libohiboard/include&quot;"/>
 								</option>
 								<option id="gnu.both.asm.option.warnings.nowarn.183905759" name="Suppress warnings (-W)" superClass="gnu.both.asm.option.warnings.nowarn"/>
 								<option id="gnu.both.asm.option.version.2069561079" name="Announce version (-v)" superClass="gnu.both.asm.option.version"/>
@@ -245,10 +248,10 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="LOCAL|VALUE_WORKSPACE_PATH" kind="sourcePath" name="startup"/>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH" kind="sourcePath" name="CMSIS"/>
-						<entry flags="LOCAL|VALUE_WORKSPACE_PATH" kind="sourcePath" name="source"/>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH" kind="sourcePath" name="board"/>
+						<entry excluding="libohiboard/middleware/lwip_2.0.3|libohiboard/middleware/lwip_1.4.1" flags="LOCAL|VALUE_WORKSPACE_PATH" kind="sourcePath" name="source"/>
+						<entry flags="LOCAL|VALUE_WORKSPACE_PATH" kind="sourcePath" name="startup"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -328,6 +331,7 @@
 									<listOptionValue builtIn="false" value="__MCUXPRESSO"/>
 									<listOptionValue builtIn="false" value="__USE_CMSIS"/>
 									<listOptionValue builtIn="false" value="NDEBUG"/>
+									<listOptionValue builtIn="false" value="LIBOHIBOARD_MKL15ZxFM"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.undef.symbol.182567487" name="Undefined symbols (-U)" superClass="gnu.c.compiler.option.preprocessor.undef.symbol"/>
 								<option id="gnu.c.compiler.option.include.paths.1835248225" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
@@ -336,6 +340,7 @@
 									<listOptionValue builtIn="false" value="../"/>
 									<listOptionValue builtIn="false" value="../startup"/>
 									<listOptionValue builtIn="false" value="../CMSIS"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Src/libohiboard/include&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.include.files.730426536" name="Include files (-include)" superClass="gnu.c.compiler.option.include.files"/>
 								<option id="gnu.c.compiler.option.optimization.flags.983684423" name="Other optimization flags" superClass="gnu.c.compiler.option.optimization.flags" value="-fno-common" valueType="string"/>
@@ -375,6 +380,7 @@
 									<listOptionValue builtIn="false" value="../"/>
 									<listOptionValue builtIn="false" value="../startup"/>
 									<listOptionValue builtIn="false" value="../CMSIS"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Src/libohiboard/include&quot;"/>
 								</option>
 								<option id="gnu.both.asm.option.warnings.nowarn.1345869284" name="Suppress warnings (-W)" superClass="gnu.both.asm.option.warnings.nowarn"/>
 								<option id="gnu.both.asm.option.version.1351488450" name="Announce version (-v)" superClass="gnu.both.asm.option.version"/>
@@ -493,10 +499,10 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="LOCAL|VALUE_WORKSPACE_PATH" kind="sourcePath" name="startup"/>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH" kind="sourcePath" name="CMSIS"/>
-						<entry flags="LOCAL|VALUE_WORKSPACE_PATH" kind="sourcePath" name="source"/>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH" kind="sourcePath" name="board"/>
+						<entry excluding="libohiboard/middleware/lwip_2.0.3|libohiboard/middleware/lwip_1.4.1" flags="LOCAL|VALUE_WORKSPACE_PATH" kind="sourcePath" name="source"/>
+						<entry flags="LOCAL|VALUE_WORKSPACE_PATH" kind="sourcePath" name="startup"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -603,4 +609,5 @@
 		<package>MKL15Z128CAD4</package>
 		<core>cm0plus</core>
 	</storageModule>
+	<storageModule moduleId="refreshScope"/>
 </cproject>
