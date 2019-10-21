@@ -1,7 +1,7 @@
 /*
  * This file is part of the Christmas Tree Ball project.
  *
- * Copyright (C) 2018 NOWAE.IT
+ * Copyright (C) 2018-2019 NOWAE.IT
  *
  * Authors:
  *  Marco Giammarini <m.giammarini@nowae.it>
