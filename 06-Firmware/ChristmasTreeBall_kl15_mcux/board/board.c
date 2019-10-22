@@ -32,3 +32,27 @@
 
 #include <stdint.h>
 #include "board.h"
+
+static void initGpio (void)
+{
+    Gpio_config(BALL_LED_1, GPIO_PINS_OUTPUT);
+    Gpio_config(BALL_LED_2, GPIO_PINS_OUTPUT);
+    Gpio_config(BALL_LED_3, GPIO_PINS_OUTPUT);
+    Gpio_config(BALL_LED_4, GPIO_PINS_OUTPUT);
+    Gpio_config(BALL_LED_5, GPIO_PINS_OUTPUT);
+    Gpio_config(BALL_LED_6, GPIO_PINS_OUTPUT);
+
+    BALL_LED_1_OFF();
+    BALL_LED_2_OFF();
+    BALL_LED_3_OFF();
+    BALL_LED_4_OFF();
+    BALL_LED_5_OFF();
+    BALL_LED_6_OFF();
+}
+
+void Board_init (void)
+{
+//    initClock();
+//    initTimer();
+    initGpio();
+}

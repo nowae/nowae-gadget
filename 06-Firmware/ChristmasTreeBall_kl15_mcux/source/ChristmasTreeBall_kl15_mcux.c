@@ -33,11 +33,33 @@
  */
 int main(void)
 {
-    volatile static int i = 0 ;
+    volatile static uint32_t i = 0, j = 0;
+
+    Board_init();
 
     while (1)
     {
         i++ ;
+
+        for (j = 0; j < 100000; j++);
+        BALL_LED_1_ON();
+        for (j = 0; j < 100000; j++);
+        BALL_LED_2_ON();
+        for (j = 0; j < 100000; j++);
+        BALL_LED_3_ON();
+        for (j = 0; j < 100000; j++);
+        BALL_LED_4_ON();
+        for (j = 0; j < 100000; j++);
+        BALL_LED_5_ON();
+        for (j = 0; j < 100000; j++);
+        BALL_LED_6_ON();
+        for (j = 0; j < 100000; j++);
+        BALL_LED_ALL_OFF();
+        for (j = 0; j < 100000; j++);
+        BALL_LED_ALL_ON();
+        for (j = 0; j < 100000; j++);
+        BALL_LED_ALL_OFF();
+
     }
     return 0 ;
 }

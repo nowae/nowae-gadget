@@ -1,7 +1,7 @@
 /*
  * This file is part of the Christmas Tree Ball project.
  *
- * Copyright (C) 2018 NOWAE.IT
+ * Copyright (C) 2018-2019 NOWAE.IT
  *
  * Authors:
  *  Marco Giammarini <m.giammarini@nowae.it>
@@ -35,24 +35,70 @@
 
 #include "libohiboard.h"
 
-#define FW_MAJOR_VERSION             1
-#define FW_MINOR_VERSION             0
-#define FW_BUG_VERSION               0
-#define FW_VERSION_STRING            "1.0.0"
-/**
- *  Time stamp of current firmware version (-5GMT + DST).
- *  http://www.currenttimestamp.com/
- */
-#define FW_TIME_VERSION              0
 /**
  * Macro for board version.
  *
  * 0: NOWAE022-0
  */
-#define PCB_VERSION                  1
-#define PCB_VERSION_STRING           "1"
+// Defined into project properties
+#ifndef BOARD_VERSION
+#error "ERROR: No board version defined!"
+#endif
+#define BOARD_VERSION_STRING                     "R" UTILITY_STRING1(BOARD_VERSION)
 
-#define PROJECT_NAME                 "Christmas Tree Ball"
-#define PROJECT_COPYRIGTH            "(C) 2018 NOWAE.IT"
+#define PROJECT_NAME                             "Christmas Tree Ball"
+#define PROJECT_COPYRIGTH                        "(C) 2018-2019 NOWAE.IT"
+
+#if (BOARD_VERSION == 0)
+
+#define BALL_LED_1                               GPIO_PINS_PTC1
+#define BALL_LED_1_ON()                          Gpio_set(BALL_LED_1)
+#define BALL_LED_1_OFF()                         Gpio_clear(BALL_LED_1)
+#define BALL_LED_1_TOGGLE()                      Gpio_toggle(BALL_LED_1)
+
+#define BALL_LED_2                               GPIO_PINS_PTC2
+#define BALL_LED_2_ON()                          Gpio_set(BALL_LED_2)
+#define BALL_LED_2_OFF()                         Gpio_clear(BALL_LED_2)
+#define BALL_LED_2_TOGGLE()                      Gpio_toggle(BALL_LED_2)
+
+#define BALL_LED_3                               GPIO_PINS_PTC3
+#define BALL_LED_3_ON()                          Gpio_set(BALL_LED_3)
+#define BALL_LED_3_OFF()                         Gpio_clear(BALL_LED_3)
+#define BALL_LED_3_TOGGLE()                      Gpio_toggle(BALL_LED_3)
+
+#define BALL_LED_4                               GPIO_PINS_PTC4
+#define BALL_LED_4_ON()                          Gpio_set(BALL_LED_4)
+#define BALL_LED_4_OFF()                         Gpio_clear(BALL_LED_4)
+#define BALL_LED_4_TOGGLE()                      Gpio_toggle(BALL_LED_4)
+
+#define BALL_LED_5                               GPIO_PINS_PTD4
+#define BALL_LED_5_ON()                          Gpio_set(BALL_LED_5)
+#define BALL_LED_5_OFF()                         Gpio_clear(BALL_LED_5)
+#define BALL_LED_5_TOGGLE()                      Gpio_toggle(BALL_LED_5)
+
+#define BALL_LED_6                               GPIO_PINS_PTD5
+#define BALL_LED_6_ON()                          Gpio_set(BALL_LED_6)
+#define BALL_LED_6_OFF()                         Gpio_clear(BALL_LED_6)
+#define BALL_LED_6_TOGGLE()                      Gpio_toggle(BALL_LED_6)
+
+#define BALL_LED_ALL_ON() do { \
+    BALL_LED_1_ON();           \
+    BALL_LED_2_ON();           \
+    BALL_LED_3_ON();           \
+    BALL_LED_4_ON();           \
+    BALL_LED_5_ON();           \
+    BALL_LED_6_ON();           \
+} while (0)
+
+#define BALL_LED_ALL_OFF() do { \
+    BALL_LED_1_OFF();           \
+    BALL_LED_2_OFF();           \
+    BALL_LED_3_OFF();           \
+    BALL_LED_4_OFF();           \
+    BALL_LED_5_OFF();           \
+    BALL_LED_6_OFF();           \
+} while (0)
+
+#endif
 
 #endif // __BOARD_H
