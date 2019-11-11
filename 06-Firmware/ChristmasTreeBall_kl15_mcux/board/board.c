@@ -1,7 +1,7 @@
 /*
  * This file is part of the Christmas Tree Ball project.
  *
- * Copyright (C) 2018 NOWAE.IT
+ * Copyright (C) 2018-2019 NOWAE.IT
  *
  * Authors:
  *  Marco Giammarini <m.giammarini@nowae.it>
@@ -32,6 +32,7 @@
 
 #include <stdint.h>
 #include "board.h"
+#include "application.h"
 
 static void initGpio (void)
 {
@@ -50,9 +51,31 @@ static void initGpio (void)
     BALL_LED_6_OFF();
 }
 
+static void initTimer (void)
+{
+    Timer_Config timerConf =
+    {
+        .clockSource    = TIMER_CLOCKSOURCE_MCG,
+        .mode           = TIMER_MODE_FREE,
+
+        .counterMode    = TIMER_COUNTERMODE_UP,
+
+        .timerFrequency = 1000ul,
+        .modulo         = 0,
+        .prescaler      = 0,
+
+        .freeCounterCallback      = Application_timerCallback,
+        .pwmPulseFinishedCallback = NULL,
+        .inputCaptureCallback     = NULL,
+        .outputCompareCallback    = NULL,
+    };
+
+    Timer_init(BALL_TIMER_DEVICE, &timerConf);
+}
+
 void Board_init (void)
 {
 //    initClock();
-//    initTimer();
+    initTimer();
     initGpio();
 }

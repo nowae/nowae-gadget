@@ -24,46 +24,39 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
- 
-#include <stdio.h>
+
+/**
+ * @file    application.c
+ * @brief   Application file.
+ */
+
 #include "board.h"
 
-/*
- * @brief   Application entry point.
- */
-int main(void)
+volatile uint32_t mBlinkCounter = 0ul;
+volatile static uint8_t  mLedCounter = 0;
+
+static const Gpio_Pins APPICATION_LED_PINS[] =
 {
-    volatile static uint32_t i = 0, j = 0;
+        BALL_LED_1,
+        BALL_LED_2,
+        BALL_LED_3,
+        BALL_LED_4,
+        BALL_LED_5,
+        BALL_LED_6,
+};
 
-    Board_init();
-
-    Timer_start(BALL_TIMER_DEVICE);
-
-    while (1)
+void Application_timerCallback (Timer_DeviceHandle dev)
+{
+    mBlinkCounter++;
+    if (mBlinkCounter == 1000ul)
     {
-        i++ ;
+        mBlinkCounter = 0;
+        mLedCounter++;
+        if (mLedCounter == BALL_LED_NUMBER)
+        {
+            mLedCounter = 0;
+        }
 
-#if 0
-        for (j = 0; j < 100000; j++);
-        BALL_LED_1_ON();
-        for (j = 0; j < 100000; j++);
-        BALL_LED_2_ON();
-        for (j = 0; j < 100000; j++);
-        BALL_LED_3_ON();
-        for (j = 0; j < 100000; j++);
-        BALL_LED_4_ON();
-        for (j = 0; j < 100000; j++);
-        BALL_LED_5_ON();
-        for (j = 0; j < 100000; j++);
-        BALL_LED_6_ON();
-        for (j = 0; j < 100000; j++);
-        BALL_LED_ALL_OFF();
-        for (j = 0; j < 100000; j++);
-        BALL_LED_ALL_ON();
-        for (j = 0; j < 100000; j++);
-        BALL_LED_ALL_OFF();
-#endif
-
+        Gpio_toggle(APPICATION_LED_PINS[mLedCounter]);
     }
-    return 0 ;
 }

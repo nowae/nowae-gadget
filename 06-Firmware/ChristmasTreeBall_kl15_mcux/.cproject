@@ -592,6 +592,7 @@
 									<listOptionValue builtIn="false" value="LIBOHIBOARD_MKL15ZxFM"/>
 									<listOptionValue builtIn="false" value="LIBOHIBOARD_BASIC"/>
 									<listOptionValue builtIn="false" value="BOARD_VERSION=0"/>
+									<listOptionValue builtIn="false" value="LIBOHIBOARD_TIMER"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.undef.symbol.490027872" name="Undefined symbols (-U)" superClass="gnu.c.compiler.option.preprocessor.undef.symbol"/>
 								<option id="gnu.c.compiler.option.include.paths.2038989154" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">

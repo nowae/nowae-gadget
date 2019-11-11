@@ -51,6 +51,8 @@
 
 #if (BOARD_VERSION == 0)
 
+#define BALL_TIMER_DEVICE                        OB_TIM0
+
 #define BALL_LED_1                               GPIO_PINS_PTC1
 #define BALL_LED_1_ON()                          Gpio_set(BALL_LED_1)
 #define BALL_LED_1_OFF()                         Gpio_clear(BALL_LED_1)
@@ -81,6 +83,8 @@
 #define BALL_LED_6_OFF()                         Gpio_clear(BALL_LED_6)
 #define BALL_LED_6_TOGGLE()                      Gpio_toggle(BALL_LED_6)
 
+#define BALL_LED_NUMBER                          6
+
 #define BALL_LED_ALL_ON() do { \
     BALL_LED_1_ON();           \
     BALL_LED_2_ON();           \
@@ -100,5 +104,7 @@
 } while (0)
 
 #endif
+
+void Board_init (void);
 
 #endif // __BOARD_H
