@@ -10,5 +10,8 @@
 
 void Application_timerCallback (Timer_DeviceHandle dev);
 
+void Application_init (void);
+
+void Application_loop (void);
 
 #endif // __APPLICATION_H

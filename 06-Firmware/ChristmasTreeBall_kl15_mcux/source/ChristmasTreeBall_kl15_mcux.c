@@ -27,6 +27,7 @@
  
 #include <stdio.h>
 #include "board.h"
+#include "application.h"
 
 /*
  * @brief   Application entry point.
@@ -37,32 +38,13 @@ int main(void)
 
     Board_init();
 
-    Timer_start(BALL_TIMER_DEVICE);
+    Application_init();
 
     while (1)
     {
         i++ ;
 
-#if 0
-        for (j = 0; j < 100000; j++);
-        BALL_LED_1_ON();
-        for (j = 0; j < 100000; j++);
-        BALL_LED_2_ON();
-        for (j = 0; j < 100000; j++);
-        BALL_LED_3_ON();
-        for (j = 0; j < 100000; j++);
-        BALL_LED_4_ON();
-        for (j = 0; j < 100000; j++);
-        BALL_LED_5_ON();
-        for (j = 0; j < 100000; j++);
-        BALL_LED_6_ON();
-        for (j = 0; j < 100000; j++);
-        BALL_LED_ALL_OFF();
-        for (j = 0; j < 100000; j++);
-        BALL_LED_ALL_ON();
-        for (j = 0; j < 100000; j++);
-        BALL_LED_ALL_OFF();
-#endif
+        Application_loop();
 
     }
     return 0 ;

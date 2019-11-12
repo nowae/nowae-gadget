@@ -51,37 +51,50 @@
 
 #if (BOARD_VERSION == 0)
 
-#define BALL_TIMER_DEVICE                        OB_TIM0
+#define BALL_TIMER_DEVICE                        OB_TIM1
+#define BALL_PWM_DEVICE                          OB_TIM0
 
 #define BALL_LED_1                               GPIO_PINS_PTC1
 #define BALL_LED_1_ON()                          Gpio_set(BALL_LED_1)
 #define BALL_LED_1_OFF()                         Gpio_clear(BALL_LED_1)
 #define BALL_LED_1_TOGGLE()                      Gpio_toggle(BALL_LED_1)
+#define BALL_LED_1_PWM_PIN                       TIMER_PINS_PTC1
+#define BALL_LED_1_PWM_CHANNEL                   TIMER_CHANNELS_CH0
 
 #define BALL_LED_2                               GPIO_PINS_PTC2
 #define BALL_LED_2_ON()                          Gpio_set(BALL_LED_2)
 #define BALL_LED_2_OFF()                         Gpio_clear(BALL_LED_2)
 #define BALL_LED_2_TOGGLE()                      Gpio_toggle(BALL_LED_2)
+#define BALL_LED_2_PWM_PIN                       TIMER_PINS_PTC2
+#define BALL_LED_2_PWM_CHANNEL                   TIMER_CHANNELS_CH1
 
 #define BALL_LED_3                               GPIO_PINS_PTC3
 #define BALL_LED_3_ON()                          Gpio_set(BALL_LED_3)
 #define BALL_LED_3_OFF()                         Gpio_clear(BALL_LED_3)
 #define BALL_LED_3_TOGGLE()                      Gpio_toggle(BALL_LED_3)
+#define BALL_LED_3_PWM_PIN                       TIMER_PINS_PTC3
+#define BALL_LED_3_PWM_CHANNEL                   TIMER_CHANNELS_CH2
 
 #define BALL_LED_4                               GPIO_PINS_PTC4
 #define BALL_LED_4_ON()                          Gpio_set(BALL_LED_4)
 #define BALL_LED_4_OFF()                         Gpio_clear(BALL_LED_4)
 #define BALL_LED_4_TOGGLE()                      Gpio_toggle(BALL_LED_4)
+#define BALL_LED_4_PWM_PIN                       TIMER_PINS_PTC4
+#define BALL_LED_4_PWM_CHANNEL                   TIMER_CHANNELS_CH3
 
 #define BALL_LED_5                               GPIO_PINS_PTD4
 #define BALL_LED_5_ON()                          Gpio_set(BALL_LED_5)
 #define BALL_LED_5_OFF()                         Gpio_clear(BALL_LED_5)
 #define BALL_LED_5_TOGGLE()                      Gpio_toggle(BALL_LED_5)
+#define BALL_LED_5_PWM_PIN                       TIMER_PINS_PTD4
+#define BALL_LED_5_PWM_CHANNEL                   TIMER_CHANNELS_CH4
 
 #define BALL_LED_6                               GPIO_PINS_PTD5
 #define BALL_LED_6_ON()                          Gpio_set(BALL_LED_6)
 #define BALL_LED_6_OFF()                         Gpio_clear(BALL_LED_6)
 #define BALL_LED_6_TOGGLE()                      Gpio_toggle(BALL_LED_6)
+#define BALL_LED_6_PWM_PIN                       TIMER_PINS_PTD5
+#define BALL_LED_6_PWM_CHANNEL                   TIMER_CHANNELS_CH5
 
 #define BALL_LED_NUMBER                          6
 

@@ -36,6 +36,7 @@
 
 static void initGpio (void)
 {
+#if defined (BALL_GPIO_DEBUG)
     Gpio_config(BALL_LED_1, GPIO_PINS_OUTPUT);
     Gpio_config(BALL_LED_2, GPIO_PINS_OUTPUT);
     Gpio_config(BALL_LED_3, GPIO_PINS_OUTPUT);
@@ -49,6 +50,7 @@ static void initGpio (void)
     BALL_LED_4_OFF();
     BALL_LED_5_OFF();
     BALL_LED_6_OFF();
+#endif
 }
 
 static void initTimer (void)
@@ -70,7 +72,46 @@ static void initTimer (void)
         .outputCompareCallback    = NULL,
     };
 
+    Timer_Config pwmConf =
+    {
+        .clockSource    = TIMER_CLOCKSOURCE_MCG,
+        .mode           = TIMER_MODE_PWM,
+
+        .counterMode    = TIMER_COUNTERMODE_EDGE_ALIGNED,
+
+        .timerFrequency = 10000ul,
+        .modulo         = 0,
+        .prescaler      = 0,
+
+        .freeCounterCallback      = NULL,
+        .pwmPulseFinishedCallback = NULL,
+        .inputCaptureCallback     = NULL,
+        .outputCompareCallback    = NULL,
+    };
+
+    Timer_OutputCompareConfig pwmPinConfig =
+    {
+        .channel  = BALL_LED_1_PWM_CHANNEL,
+        .duty     = 0,
+        .polarity = GPIO_HIGH,
+    };
+
     Timer_init(BALL_TIMER_DEVICE, &timerConf);
+
+    Timer_init(BALL_PWM_DEVICE, &pwmConf);
+#if !defined (BALL_GPIO_DEBUG)
+    Timer_configPwmPin(BALL_PWM_DEVICE, &pwmPinConfig, BALL_LED_1_PWM_PIN);
+    pwmPinConfig.channel = BALL_LED_2_PWM_CHANNEL;
+    Timer_configPwmPin(BALL_PWM_DEVICE, &pwmPinConfig, BALL_LED_2_PWM_PIN);
+    pwmPinConfig.channel = BALL_LED_3_PWM_CHANNEL;
+    Timer_configPwmPin(BALL_PWM_DEVICE, &pwmPinConfig, BALL_LED_3_PWM_PIN);
+    pwmPinConfig.channel = BALL_LED_4_PWM_CHANNEL;
+    Timer_configPwmPin(BALL_PWM_DEVICE, &pwmPinConfig, BALL_LED_4_PWM_PIN);
+    pwmPinConfig.channel = BALL_LED_5_PWM_CHANNEL;
+    Timer_configPwmPin(BALL_PWM_DEVICE, &pwmPinConfig, BALL_LED_5_PWM_PIN);
+    pwmPinConfig.channel = BALL_LED_6_PWM_CHANNEL;
+    Timer_configPwmPin(BALL_PWM_DEVICE, &pwmPinConfig, BALL_LED_6_PWM_PIN);
+#endif
 }
 
 void Board_init (void)
