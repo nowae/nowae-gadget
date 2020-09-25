@@ -13,60 +13,6 @@ Comment2 "N. Orlandini"
 Comment3 "M. Giammarini"
 Comment4 "2020-09-xx"
 $EndDescr
-$Comp
-L nowae-logic:TCA9554PWR U?
-U 1 1 5F6DD543
-P 2700 2000
-F 0 "U?" H 2700 2753 60  0000 C CNN
-F 1 "TCA9554PWR" H 2700 2647 60  0000 C CNN
-F 2 "SOP:TSSOP16_4.4x5.0_0.65" H 2700 3100 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/tca9554.pdf" H 2700 2000 50  0001 C CNN
-F 4 "Texaas Instruments" H 2700 3300 50  0001 C CNN "Manufacturer"
-F 5 "TCA9554PWR" H 2700 3200 50  0001 C CNN "Part Number"
-F 6 "Farnell Italia S.r.l." H 2700 3000 50  0001 C CNN "Distributor"
-F 7 "3009454" H 2700 2900 50  0001 C CNN "Distributor Code"
-F 8 "1.050" H 2700 2600 50  0001 C CNN "Price €"
-F 9 "Digi-Key Electronics Inc" H 2700 2800 50  0001 C CNN "Distributor2"
-F 10 "296-30135-1-ND" H 2700 2700 50  0001 C CNN "Distributor2 Code"
-	1    2700 2000
-	1    0    0    -1  
-$EndComp
-$Comp
-L nowae-logic:TCA9554PWR U?
-U 1 1 5F6DEFCE
-P 2700 3550
-F 0 "U?" H 2700 4303 60  0000 C CNN
-F 1 "TCA9554PWR" H 2700 4197 60  0000 C CNN
-F 2 "SOP:TSSOP16_4.4x5.0_0.65" H 2700 4650 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/tca9554.pdf" H 2700 3550 50  0001 C CNN
-F 4 "Texaas Instruments" H 2700 4850 50  0001 C CNN "Manufacturer"
-F 5 "TCA9554PWR" H 2700 4750 50  0001 C CNN "Part Number"
-F 6 "Farnell Italia S.r.l." H 2700 4550 50  0001 C CNN "Distributor"
-F 7 "3009454" H 2700 4450 50  0001 C CNN "Distributor Code"
-F 8 "1.050" H 2700 4150 50  0001 C CNN "Price €"
-F 9 "Digi-Key Electronics Inc" H 2700 4350 50  0001 C CNN "Distributor2"
-F 10 "296-30135-1-ND" H 2700 4250 50  0001 C CNN "Distributor2 Code"
-	1    2700 3550
-	1    0    0    -1  
-$EndComp
-$Comp
-L nowae-logic:TCA9554PWR U?
-U 1 1 5F6DFDA3
-P 2700 5200
-F 0 "U?" H 2700 5953 60  0000 C CNN
-F 1 "TCA9554PWR" H 2700 5847 60  0000 C CNN
-F 2 "SOP:TSSOP16_4.4x5.0_0.65" H 2700 6300 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/tca9554.pdf" H 2700 5200 50  0001 C CNN
-F 4 "Texaas Instruments" H 2700 6500 50  0001 C CNN "Manufacturer"
-F 5 "TCA9554PWR" H 2700 6400 50  0001 C CNN "Part Number"
-F 6 "Farnell Italia S.r.l." H 2700 6200 50  0001 C CNN "Distributor"
-F 7 "3009454" H 2700 6100 50  0001 C CNN "Distributor Code"
-F 8 "1.050" H 2700 5800 50  0001 C CNN "Price €"
-F 9 "Digi-Key Electronics Inc" H 2700 6000 50  0001 C CNN "Distributor2"
-F 10 "296-30135-1-ND" H 2700 5900 50  0001 C CNN "Distributor2 Code"
-	1    2700 5200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4450 2550 4900 2550
 $Comp
@@ -2891,6 +2837,107 @@ F 3 "" H 2700 5800 60  0000 C CNN
 $EndComp
 Wire Wire Line
 	2700 5800 2700 5750
+Text Notes 2750 2550 0    50   ~ 0
+ADDRESS: 0x20
+Text Notes 2750 4100 0    50   ~ 0
+ADDRESS: 0x21
+Text Notes 2750 5750 0    50   ~ 0
+ADDRESS: 0x22
+Wire Wire Line
+	2300 2150 2200 2150
+Wire Wire Line
+	2200 2150 2200 2250
+Wire Wire Line
+	2300 2250 2200 2250
+Connection ~ 2200 2250
+Wire Wire Line
+	2200 2250 2200 2350
+Wire Wire Line
+	2300 2350 2200 2350
+Connection ~ 2200 2350
+Wire Wire Line
+	2200 2350 2200 2450
+$Comp
+L power:GND #PWR?
+U 1 1 5FA8ACE4
+P 2200 2450
+F 0 "#PWR?" H 2200 2450 30  0001 C CNN
+F 1 "GND" H 2200 2450 30  0001 C CNN
+F 2 "" H 2200 2450 60  0000 C CNN
+F 3 "" H 2200 2450 60  0000 C CNN
+	1    2200 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 3800 2200 3800
+Wire Wire Line
+	2200 3800 2200 3900
+Wire Wire Line
+	2300 3900 2200 3900
+Connection ~ 2200 3900
+Wire Wire Line
+	2200 3900 2200 4000
+$Comp
+L power:GND #PWR?
+U 1 1 5FA8B6E5
+P 2200 4000
+F 0 "#PWR?" H 2200 4000 30  0001 C CNN
+F 1 "GND" H 2200 4000 30  0001 C CNN
+F 2 "" H 2200 4000 60  0000 C CNN
+F 3 "" H 2200 4000 60  0000 C CNN
+	1    2200 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 3700 2200 3700
+Wire Wire Line
+	2200 3700 2200 3650
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5FB16AF0
+P 2200 3650
+F 0 "#PWR?" H 2200 3575 30  0001 C CNN
+F 1 "+3.3V" H 2200 3783 30  0000 C CNN
+F 2 "" H 2200 3650 60  0000 C CNN
+F 3 "" H 2200 3650 60  0000 C CNN
+	1    2200 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 5350 2200 5550
+Wire Wire Line
+	2300 5550 2200 5550
+Connection ~ 2200 5550
+Wire Wire Line
+	2200 5550 2200 5650
+$Comp
+L power:GND #PWR?
+U 1 1 5FB2FA1C
+P 2200 5650
+F 0 "#PWR?" H 2200 5650 30  0001 C CNN
+F 1 "GND" H 2200 5650 30  0001 C CNN
+F 2 "" H 2200 5650 60  0000 C CNN
+F 3 "" H 2200 5650 60  0000 C CNN
+	1    2200 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 5450 2150 5350
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5FB2FA24
+P 2150 5350
+F 0 "#PWR?" H 2150 5275 30  0001 C CNN
+F 1 "+3.3V" H 2150 5483 30  0000 C CNN
+F 2 "" H 2150 5350 60  0000 C CNN
+F 3 "" H 2150 5350 60  0000 C CNN
+	1    2150 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 5350 2300 5350
+Wire Wire Line
+	2150 5450 2300 5450
 Wire Bus Line
 	4350 1250 4350 4550
 Wire Bus Line
@@ -2899,4 +2946,58 @@ Wire Bus Line
 	8450 1250 8450 4550
 Wire Bus Line
 	3750 1250 3750 5450
+$Comp
+L nowae-logic:TCA9554PWR U?
+U 1 1 5F7451D0
+P 2700 2000
+F 0 "U?" H 2700 2731 50  0000 C CNN
+F 1 "TCA9554PWR" H 2700 2640 50  0000 C CNN
+F 2 "SOP:TSSOP16_4.4x5.0_0.65" H 2700 3100 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/tca9554.pdf" H 2700 2000 50  0001 C CNN
+F 4 "Texaas Instruments" H 2700 3300 50  0001 C CNN "Manufacturer"
+F 5 "TCA9554PWR" H 2700 3200 50  0001 C CNN "Part Number"
+F 6 "Farnell Italia S.r.l." H 2700 3000 50  0001 C CNN "Distributor"
+F 7 "3009454" H 2700 2900 50  0001 C CNN "Distributor Code"
+F 8 "1.050" H 2700 2600 50  0001 C CNN "Price €"
+F 9 "Digi-Key Electronics Inc" H 2700 2800 50  0001 C CNN "Distributor2"
+F 10 "296-30135-1-ND" H 2700 2700 50  0001 C CNN "Distributor2 Code"
+	1    2700 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L nowae-logic:TCA9554PWR U?
+U 1 1 5F746850
+P 2700 3550
+F 0 "U?" H 2700 4281 50  0000 C CNN
+F 1 "TCA9554PWR" H 2700 4190 50  0000 C CNN
+F 2 "SOP:TSSOP16_4.4x5.0_0.65" H 2700 4650 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/tca9554.pdf" H 2700 3550 50  0001 C CNN
+F 4 "Texaas Instruments" H 2700 4850 50  0001 C CNN "Manufacturer"
+F 5 "TCA9554PWR" H 2700 4750 50  0001 C CNN "Part Number"
+F 6 "Farnell Italia S.r.l." H 2700 4550 50  0001 C CNN "Distributor"
+F 7 "3009454" H 2700 4450 50  0001 C CNN "Distributor Code"
+F 8 "1.050" H 2700 4150 50  0001 C CNN "Price €"
+F 9 "Digi-Key Electronics Inc" H 2700 4350 50  0001 C CNN "Distributor2"
+F 10 "296-30135-1-ND" H 2700 4250 50  0001 C CNN "Distributor2 Code"
+	1    2700 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L nowae-logic:TCA9554PWR U?
+U 1 1 5F747F15
+P 2700 5200
+F 0 "U?" H 2700 5931 50  0000 C CNN
+F 1 "TCA9554PWR" H 2700 5840 50  0000 C CNN
+F 2 "SOP:TSSOP16_4.4x5.0_0.65" H 2700 6300 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/tca9554.pdf" H 2700 5200 50  0001 C CNN
+F 4 "Texaas Instruments" H 2700 6500 50  0001 C CNN "Manufacturer"
+F 5 "TCA9554PWR" H 2700 6400 50  0001 C CNN "Part Number"
+F 6 "Farnell Italia S.r.l." H 2700 6200 50  0001 C CNN "Distributor"
+F 7 "3009454" H 2700 6100 50  0001 C CNN "Distributor Code"
+F 8 "1.050" H 2700 5800 50  0001 C CNN "Price €"
+F 9 "Digi-Key Electronics Inc" H 2700 6000 50  0001 C CNN "Distributor2"
+F 10 "296-30135-1-ND" H 2700 5900 50  0001 C CNN "Distributor2 Code"
+	1    2700 5200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

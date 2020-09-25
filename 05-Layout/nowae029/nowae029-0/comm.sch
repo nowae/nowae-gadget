@@ -1,7 +1,7 @@
 EESchema Schematic File Version 4
 EELAYER 30 0
 EELAYER END
-$Descr A4 11693 8268
+$Descr A3 16535 11693
 encoding utf-8
 Sheet 5 5
 Title "Small Christmas Tree - Gadget 2020"
@@ -13,4 +13,254 @@ Comment2 "N. Orlandini"
 Comment3 "M. Giammarini"
 Comment4 "2020-09-xx"
 $EndDescr
+Text Label 7750 4950 0    60   ~ 0
+FTDI_VCC
+$Comp
+L nowae-capacitor:CAPACITOR C3
+U 1 1 589DBD48
+P 8250 5400
+F 0 "C3" H 8250 5500 50  0000 L CNN
+F 1 "100nF" H 8256 5315 50  0000 L CNN
+F 2 "CAPACITOR:CAPACITOR-0402" H 8288 5250 30  0001 C CNN
+F 3 "" H 8250 5400 60  0000 C CNN
+	1    8250 5400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 589DBF49
+P 8250 6000
+F 0 "#PWR01" H 8250 6000 30  0001 C CNN
+F 1 "GND" H 8250 6000 30  0001 C CNN
+F 2 "" H 8250 6000 60  0000 C CNN
+F 3 "" H 8250 6000 60  0000 C CNN
+	1    8250 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR05
+U 1 1 589FD5EA
+P 7000 4500
+F 0 "#PWR05" H 7000 4425 30  0001 C CNN
+F 1 "+5V" H 7000 4600 30  0000 C CNN
+F 2 "" H 7000 4500 60  0000 C CNN
+F 3 "" H 7000 4500 60  0000 C CNN
+	1    7000 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 5050 8250 5050
+Wire Wire Line
+	8250 5050 8350 5050
+Wire Wire Line
+	8250 5750 8250 5850
+Wire Wire Line
+	8250 5850 8250 6000
+Wire Wire Line
+	8250 5750 8350 5750
+Wire Wire Line
+	7750 5850 8000 5850
+Wire Wire Line
+	8000 5850 8250 5850
+Wire Wire Line
+	8250 5850 8350 5850
+Connection ~ 8250 5750
+Wire Wire Line
+	8250 5150 8350 5150
+Wire Wire Line
+	8250 4950 8250 5050
+Wire Wire Line
+	8250 5050 8250 5150
+Connection ~ 8250 5850
+Wire Wire Line
+	9150 4550 9650 4550
+Wire Wire Line
+	9150 4650 9650 4650
+Wire Wire Line
+	7000 5550 7000 5850
+Wire Wire Line
+	7000 4550 6000 4550
+Wire Wire Line
+	7000 4500 7000 4550
+Connection ~ 7000 5850
+Connection ~ 7000 4550
+$Comp
+L nowae-capacitor:CAPACITOR C10
+U 1 1 5AD70C51
+P 8000 5400
+F 0 "C10" H 8000 5500 50  0000 L CNN
+F 1 "100nF" H 8006 5315 50  0000 L CNN
+F 2 "CAPACITOR:CAPACITOR-0402" H 8038 5250 30  0001 C CNN
+F 3 "" H 8000 5400 60  0000 C CNN
+	1    8000 5400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L nowae-capacitor:CAPACITOR C9
+U 1 1 5AD70DF8
+P 7750 5400
+F 0 "C9" H 7750 5500 50  0000 L CNN
+F 1 "100nF" H 7756 5315 50  0000 L CNN
+F 2 "CAPACITOR:CAPACITOR-0402" H 7788 5250 30  0001 C CNN
+F 3 "" H 7750 5400 60  0000 C CNN
+	1    7750 5400
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 4950 8250 4950
+Wire Wire Line
+	8250 4950 8350 4950
+Wire Wire Line
+	8000 5550 8000 5850
+Connection ~ 8000 5850
+Wire Wire Line
+	7750 5550 7750 5850
+Connection ~ 7750 5850
+Connection ~ 8250 5050
+Connection ~ 8250 5150
+Connection ~ 8250 4950
+NoConn ~ 9150 4750
+NoConn ~ 9150 4850
+NoConn ~ 9150 5550
+NoConn ~ 9150 5650
+NoConn ~ 9150 5750
+NoConn ~ 9150 5850
+Wire Wire Line
+	7000 4550 8350 4550
+Wire Wire Line
+	5600 4650 5700 4650
+Wire Wire Line
+	5800 4750 8350 4750
+$Comp
+L nowae-capacitor:CAPACITOR C?
+U 1 1 5F6ED6CF
+P 7000 5400
+F 0 "C?" H 7000 5500 50  0000 L CNN
+F 1 "100nF" H 7006 5315 50  0000 L CNN
+F 2 "CAPACITOR:CAPACITOR-0402" H 7038 5250 30  0001 C CNN
+F 3 "" H 7000 5400 60  0000 C CNN
+	1    7000 5400
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 5250 7000 4550
+Wire Wire Line
+	7000 5850 7750 5850
+$Comp
+L nowae-transceiver:FT230XS_2 U?
+U 1 1 5F6EF6F5
+P 8750 5200
+F 0 "U?" H 8750 6115 50  0000 C CNN
+F 1 "FT230XS_2" H 8750 6024 50  0000 C CNN
+F 2 "SOP:SSOP16_3.9x4.9_0.635" H 8750 3900 60  0001 C CNN
+F 3 "http://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT230X.pdf" H 8800 4350 60  0001 C CNN
+F 4 "FTDI" H 8750 4400 60  0001 C CNN "Manufacturer"
+F 5 "FT230XS" H 8750 4200 60  0001 C CNN "Part Number"
+F 6 "Farnell Italia S.r.l." H 8750 4300 60  0001 C CNN "Distributor"
+F 7 "2081321" H 8750 4100 60  0001 C CNN "Distributor Code"
+F 8 "2.110" H 8750 4000 60  0001 C CNN "Price €"
+	1    8750 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 5150 8250 5250
+Wire Wire Line
+	8000 5050 8000 5250
+Wire Wire Line
+	7750 4950 7750 5250
+Wire Wire Line
+	8250 5550 8250 5750
+Text HLabel 9650 4550 2    50   Output ~ 0
+COMM_TX
+Text HLabel 9650 4650 2    50   Input ~ 0
+COMM_RX
+$Comp
+L nowae-connector:USB3.1-C-WE-632722110112 P?
+U 1 1 5F6F67E5
+P 5000 5250
+F 0 "P?" H 5000 6717 50  0000 C CNN
+F 1 "USB3.1-C-WE-632722110112" H 5000 6626 50  0000 C CNN
+F 2 "CONNECTOR:USB3.1-C_WE-632722110112" H 5000 5250 50  0001 C CNN
+F 3 "https://www.we-online.com/catalog/datasheet/632722110112.pdf" H 5150 5250 50  0001 C CNN
+F 4 "Wurth Elektronik GmbH" H 5000 3800 50  0001 C CNN "Manufacturer"
+F 5 "632722110112" H 5000 3700 50  0001 C CNN "Part Number"
+F 6 "Wurth Elektronik GmbH" H 5000 3600 50  0001 C CNN "Distributor"
+F 7 "632722110112" H 5000 3500 50  0001 C CNN "Distributor Code"
+F 8 "2.850" H 5000 3400 50  0001 C CNN "Price €"
+F 9 "Digi-Key Electronics Inc" H 5000 3300 50  0001 C CNN "Distributor2"
+F 10 "732-13724-1-ND" H 5000 3200 50  0001 C CNN "Distributor2 Code"
+F 11 "Farnell Italia S.r.l." H 5000 3100 50  0001 C CNN "Distributor3"
+F 12 "3264782" H 5000 3000 50  0001 C CNN "Distributor3 Code"
+	1    5000 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 4650 5700 5950
+Wire Wire Line
+	5700 5950 5600 5950
+Connection ~ 5700 4650
+Wire Wire Line
+	5700 4650 8350 4650
+Wire Wire Line
+	5600 5850 5800 5850
+Wire Wire Line
+	5800 5850 5800 4750
+Wire Wire Line
+	5800 4550 5600 4550
+Connection ~ 5800 4750
+Wire Wire Line
+	5800 4750 5800 4550
+Wire Wire Line
+	5600 6450 5900 6450
+Wire Wire Line
+	5900 6450 5900 5850
+Wire Wire Line
+	5900 4050 5600 4050
+Wire Wire Line
+	5600 5150 5900 5150
+Connection ~ 5900 5150
+Wire Wire Line
+	5900 5150 5900 4050
+Wire Wire Line
+	5600 5350 5900 5350
+Connection ~ 5900 5350
+Wire Wire Line
+	5900 5350 5900 5150
+Connection ~ 5900 5850
+Wire Wire Line
+	5900 5850 5900 5350
+Wire Wire Line
+	5900 5850 7000 5850
+Wire Wire Line
+	5600 4350 6000 4350
+Wire Wire Line
+	6000 4350 6000 4550
+Wire Wire Line
+	6000 5650 5600 5650
+Connection ~ 6000 4550
+Wire Wire Line
+	6000 4550 6000 4850
+Wire Wire Line
+	6000 5650 6000 6150
+Wire Wire Line
+	6000 6150 5600 6150
+Connection ~ 6000 5650
+Wire Wire Line
+	5600 4850 6000 4850
+Connection ~ 6000 4850
+Wire Wire Line
+	6000 4850 6000 5650
+Wire Wire Line
+	4400 6450 4300 6450
+$Comp
+L power:GND #PWR?
+U 1 1 5F71245D
+P 4300 6450
+F 0 "#PWR?" H 4300 6450 30  0001 C CNN
+F 1 "GND" H 4300 6450 30  0001 C CNN
+F 2 "" H 4300 6450 60  0000 C CNN
+F 3 "" H 4300 6450 60  0000 C CNN
+	1    4300 6450
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
