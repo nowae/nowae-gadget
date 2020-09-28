@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 5
+Sheet 1 6
 Title "Small Christmas Tree - Gadget 2020"
 Date ""
 Rev "0-D"
@@ -14,27 +14,330 @@ Comment3 "M. Giammarini"
 Comment4 "2020-09-xx"
 $EndDescr
 $Sheet
-S 4650 2050 1550 1850
+S 4750 1900 1550 1850
 U 5F6CFA67
 F0 "Microcontroller" 50
 F1 "mcu.sch" 50
+F2 "DEBUG_RX" I L 4750 3300 50 
+F3 "DEBUG_TX" O L 4750 3400 50 
+F4 "BRANCH_EXT_SDA" B R 6300 3300 50 
+F5 "BRANCH_EXT_SCL" O R 6300 3400 50 
+F6 "BRANCH_SDA" B R 6300 2200 50 
+F7 "BRANCH_SCL" O R 6300 2300 50 
+F8 "STAR" O L 4750 2750 50 
+F9 "BETTERY_STATUS" I L 4750 2250 50 
 $EndSheet
 $Sheet
-S 7650 2000 1700 650 
+S 7000 1900 1200 700 
 U 5F6CFAAE
 F0 "Branch1" 50
 F1 "branch1.sch" 50
+F2 "BRANCH1_SDA" B L 7000 2200 50 
+F3 "BRANCH1_SCL" I L 7000 2300 50 
 $EndSheet
 $Sheet
-S 1650 2100 2000 700 
+S 2850 1900 1200 700 
 U 5F6CFAD9
 F0 "Power Supply" 50
 F1 "supply.sch" 50
+F2 "BATTERY_STATUS" O R 4050 2250 50 
 $EndSheet
 $Sheet
-S 1650 3350 2000 650 
+S 2850 2900 1200 850 
 U 5F6CFB15
 F0 "Communication" 50
 F1 "comm.sch" 50
+F2 "COMM_TX" O R 4050 3300 50 
+F3 "COMM_RX" I R 4050 3400 50 
 $EndSheet
+Wire Wire Line
+	4050 3400 4750 3400
+Wire Wire Line
+	4050 3300 4750 3300
+Wire Wire Line
+	4750 2250 4050 2250
+Wire Wire Line
+	7000 2300 6700 2300
+Wire Wire Line
+	6300 2200 6800 2200
+$Sheet
+S 7000 2800 1200 700 
+U 5F8C03DD
+F0 "Branch2" 50
+F1 "branch2.sch" 50
+F2 "BRANCH2_SDA" B L 7000 3100 50 
+F3 "BRANCH2_SCL" I L 7000 3200 50 
+$EndSheet
+Wire Wire Line
+	7000 3100 6800 3100
+Wire Wire Line
+	6800 3100 6800 2200
+Connection ~ 6800 2200
+Wire Wire Line
+	6800 2200 7000 2200
+Wire Wire Line
+	7000 3200 6700 3200
+Wire Wire Line
+	6700 3200 6700 2300
+Connection ~ 6700 2300
+Wire Wire Line
+	6700 2300 6300 2300
+Text Notes 4500 2800 0    50   ~ 0
+TODO
+$Comp
+L nowae-connector:CONN_4X1 P?
+U 1 1 5FE12FB0
+P 7450 4050
+F 0 "P?" H 7400 4300 50  0000 L CNN
+F 1 "COMM_3" H 7300 3800 50  0000 L CNN
+F 2 "" H 7825 4050 60  0001 C CNN
+F 3 "" H 7825 4050 60  0001 C CNN
+F 4 "-" H 7450 3700 60  0001 C CNN "Manufacturer"
+F 5 "-" H 7450 3600 60  0001 C CNN "Part Number"
+F 6 "-" H 7450 3500 60  0001 C CNN "Distributor"
+F 7 "-" H 7450 3400 60  0001 C CNN "Distributor Code"
+F 8 "-" H 7450 3300 60  0001 C CNN "Price €"
+F 9 "-" H 7450 3200 60  0001 C CNN "Distributor2"
+F 10 "-" H 7450 3100 60  0001 C CNN "Distributor2 Code"
+F 11 "-" H 7450 3000 60  0001 C CNN "Distributor3"
+F 12 "-" H 7450 2900 60  0001 C CNN "Distributor3 Code"
+	1    7450 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L nowae-connector:CONN_4X1 P?
+U 1 1 5FE139F9
+P 8400 4050
+F 0 "P?" H 8350 4300 50  0000 L CNN
+F 1 "COMM_4" H 8250 3800 50  0000 L CNN
+F 2 "" H 8775 4050 60  0001 C CNN
+F 3 "" H 8775 4050 60  0001 C CNN
+F 4 "-" H 8400 3700 60  0001 C CNN "Manufacturer"
+F 5 "-" H 8400 3600 60  0001 C CNN "Part Number"
+F 6 "-" H 8400 3500 60  0001 C CNN "Distributor"
+F 7 "-" H 8400 3400 60  0001 C CNN "Distributor Code"
+F 8 "-" H 8400 3300 60  0001 C CNN "Price €"
+F 9 "-" H 8400 3200 60  0001 C CNN "Distributor2"
+F 10 "-" H 8400 3100 60  0001 C CNN "Distributor2 Code"
+F 11 "-" H 8400 3000 60  0001 C CNN "Distributor3"
+F 12 "-" H 8400 2900 60  0001 C CNN "Distributor3 Code"
+	1    8400 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 3300 6800 3300
+Wire Wire Line
+	7750 4000 8250 4000
+Wire Wire Line
+	6300 3400 6700 3400
+Wire Wire Line
+	7750 4100 8250 4100
+Wire Wire Line
+	7300 3900 7250 3900
+Wire Wire Line
+	7300 4200 7250 4200
+$Comp
+L power:GND #PWR?
+U 1 1 5FE1654B
+P 7250 3900
+F 0 "#PWR?" H 7250 3900 30  0001 C CNN
+F 1 "GND" H 7250 3900 30  0001 C CNN
+F 2 "" H 7250 3900 60  0000 C CNN
+F 3 "" H 7250 3900 60  0000 C CNN
+	1    7250 3900
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FE165AB
+P 7250 4200
+F 0 "#PWR?" H 7250 4200 30  0001 C CNN
+F 1 "GND" H 7250 4200 30  0001 C CNN
+F 2 "" H 7250 4200 60  0000 C CNN
+F 3 "" H 7250 4200 60  0000 C CNN
+	1    7250 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8250 4200 8200 4200
+Wire Wire Line
+	8250 3900 8200 3900
+$Comp
+L power:GND #PWR?
+U 1 1 5FE1708B
+P 8200 3900
+F 0 "#PWR?" H 8200 3900 30  0001 C CNN
+F 1 "GND" H 8200 3900 30  0001 C CNN
+F 2 "" H 8200 3900 60  0000 C CNN
+F 3 "" H 8200 3900 60  0000 C CNN
+	1    8200 3900
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FE173C1
+P 8200 4200
+F 0 "#PWR?" H 8200 4200 30  0001 C CNN
+F 1 "GND" H 8200 4200 30  0001 C CNN
+F 2 "" H 8200 4200 60  0000 C CNN
+F 3 "" H 8200 4200 60  0000 C CNN
+	1    8200 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6800 4000 6800 3300
+Wire Wire Line
+	6700 3400 6700 4100
+$Comp
+L nowae-connector:CONN_4X1 P?
+U 1 1 5FE1BF3C
+P 7450 4750
+F 0 "P?" H 7400 5000 50  0000 L CNN
+F 1 "SUPPLY_3" H 7250 4500 50  0000 L CNN
+F 2 "" H 7825 4750 60  0001 C CNN
+F 3 "" H 7825 4750 60  0001 C CNN
+F 4 "-" H 7450 4400 60  0001 C CNN "Manufacturer"
+F 5 "-" H 7450 4300 60  0001 C CNN "Part Number"
+F 6 "-" H 7450 4200 60  0001 C CNN "Distributor"
+F 7 "-" H 7450 4100 60  0001 C CNN "Distributor Code"
+F 8 "-" H 7450 4000 60  0001 C CNN "Price €"
+F 9 "-" H 7450 3900 60  0001 C CNN "Distributor2"
+F 10 "-" H 7450 3800 60  0001 C CNN "Distributor2 Code"
+F 11 "-" H 7450 3700 60  0001 C CNN "Distributor3"
+F 12 "-" H 7450 3600 60  0001 C CNN "Distributor3 Code"
+	1    7450 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 4800 7250 4800
+Wire Wire Line
+	7300 4600 7250 4600
+Wire Wire Line
+	7300 4900 7250 4900
+$Comp
+L power:GND #PWR?
+U 1 1 5FE1BF46
+P 7200 4600
+F 0 "#PWR?" H 7200 4600 30  0001 C CNN
+F 1 "GND" H 7200 4600 30  0001 C CNN
+F 2 "" H 7200 4600 60  0000 C CNN
+F 3 "" H 7200 4600 60  0000 C CNN
+	1    7200 4600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7300 4700 7250 4700
+Wire Wire Line
+	7250 4700 7250 4600
+Connection ~ 7250 4600
+Wire Wire Line
+	7250 4600 7200 4600
+Wire Wire Line
+	7250 4900 7250 4800
+Connection ~ 7250 4800
+Wire Wire Line
+	7250 4800 7300 4800
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5FE1E149
+P 7200 4800
+F 0 "#PWR?" H 7200 4725 30  0001 C CNN
+F 1 "+3.3V" V 7200 4903 30  0000 L CNN
+F 2 "" H 7200 4800 60  0000 C CNN
+F 3 "" H 7200 4800 60  0000 C CNN
+	1    7200 4800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L nowae-connector:CONN_4X1 P?
+U 1 1 5FE209E3
+P 8400 4750
+F 0 "P?" H 8350 5000 50  0000 L CNN
+F 1 "SUPPLY_4" H 8200 4500 50  0000 L CNN
+F 2 "" H 8775 4750 60  0001 C CNN
+F 3 "" H 8775 4750 60  0001 C CNN
+F 4 "-" H 8400 4400 60  0001 C CNN "Manufacturer"
+F 5 "-" H 8400 4300 60  0001 C CNN "Part Number"
+F 6 "-" H 8400 4200 60  0001 C CNN "Distributor"
+F 7 "-" H 8400 4100 60  0001 C CNN "Distributor Code"
+F 8 "-" H 8400 4000 60  0001 C CNN "Price €"
+F 9 "-" H 8400 3900 60  0001 C CNN "Distributor2"
+F 10 "-" H 8400 3800 60  0001 C CNN "Distributor2 Code"
+F 11 "-" H 8400 3700 60  0001 C CNN "Distributor3"
+F 12 "-" H 8400 3600 60  0001 C CNN "Distributor3 Code"
+	1    8400 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 4800 8200 4800
+Wire Wire Line
+	8250 4600 8200 4600
+Wire Wire Line
+	8250 4900 8200 4900
+$Comp
+L power:GND #PWR?
+U 1 1 5FE209EC
+P 8150 4600
+F 0 "#PWR?" H 8150 4600 30  0001 C CNN
+F 1 "GND" H 8150 4600 30  0001 C CNN
+F 2 "" H 8150 4600 60  0000 C CNN
+F 3 "" H 8150 4600 60  0000 C CNN
+	1    8150 4600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8250 4700 8200 4700
+Wire Wire Line
+	8200 4700 8200 4600
+Connection ~ 8200 4600
+Wire Wire Line
+	8200 4600 8150 4600
+Wire Wire Line
+	8200 4900 8200 4800
+Connection ~ 8200 4800
+Wire Wire Line
+	8200 4800 8250 4800
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5FE209F9
+P 8150 4800
+F 0 "#PWR?" H 8150 4725 30  0001 C CNN
+F 1 "+3.3V" V 8150 4903 30  0000 L CNN
+F 2 "" H 8150 4800 60  0000 C CNN
+F 3 "" H 8150 4800 60  0000 C CNN
+	1    8150 4800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6800 4000 7300 4000
+Text Label 6800 4000 0    50   ~ 0
+B_EXT_SDA
+Wire Wire Line
+	6700 4100 7300 4100
+Text Label 6800 4100 0    50   ~ 0
+B_EXT_SCL
+Text Label 7750 4000 0    50   ~ 0
+B_EXT_SDA
+Text Label 7750 4100 0    50   ~ 0
+B_EXT_SCL
+Wire Notes Line
+	7650 3700 7650 5050
+Wire Notes Line
+	7650 5050 6650 5050
+Wire Notes Line
+	6650 5050 6650 3700
+Wire Notes Line
+	6650 3700 7650 3700
+Wire Notes Line
+	7700 3700 7700 5050
+Wire Notes Line
+	7700 5050 8600 5050
+Wire Notes Line
+	8600 5050 8600 3700
+Wire Notes Line
+	8600 3700 7700 3700
+Text Notes 6650 5150 0    50   Italic 0
+Branch 3
+Text Notes 7700 5150 0    50   Italic 0
+Branch 4
 $EndSCHEMATC
