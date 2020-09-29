@@ -14,10 +14,10 @@ Comment3 "M. Giammarini"
 Comment4 "2020-09-xx"
 $EndDescr
 $Comp
-L nowae-microcontroller:STM32L073CBT6 U101
+L nowae-microcontroller:STM32L073CBT6 U201
 U 1 1 5F6DBB58
 P 5700 3400
-F 0 "U101" H 5700 3450 60  0000 C CNN
+F 0 "U201" H 5700 3450 60  0000 C CNN
 F 1 "STM32L073CBT6" H 5350 3300 60  0000 L CNN
 F 2 "LQFP:LQFP48_7x7_0.5" H 5700 2150 60  0001 C CNN
 F 3 "https://www.st.com/resource/en/datasheet/stm32l073rz.pdf" H 7750 3950 60  0001 C CNN
