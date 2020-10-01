@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /Users/warcomeb/Projects/NOWAE/NOWAE029/05-Layout/nowae029/nowae029-0/nowae029.sch)
-    (date "2020 September 30, Wednesday 13:58:23")
+    (date "Thursday, 01 October 2020 at 13:56:11")
     (tool "Eeschema (5.1.6-0-10_14)")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -253,7 +253,7 @@
       (tstamp 5F6F0028))
     (comp (ref Y201)
       (value 32768)
-      (footprint CRYSTAL:CRYSTAL-1206)
+      (footprint CRYSTAL:CRYSTAL_1206)
       (datasheet http://www.microcrystal.com/images/_PDF/3_Crystal_Ceramic-Package/cm7v-t1a.pdf)
       (fields
         (field (name Distributor) "RS Components S.p.a.")
@@ -334,6 +334,7 @@
       (tstamp 5F7897E3))
     (comp (ref P201)
       (value DEBUG)
+      (footprint CONNECTOR:CONN-STRIP-5x1-2.54)
       (fields
         (field (name Distributor) -)
         (field (name "Distributor Code") -)
@@ -3093,7 +3094,7 @@
       (fields
         (field (name Reference) Y)
         (field (name Value) 32768Hz_CM7V-T1A)
-        (field (name Footprint) CRYSTAL:CRYSTAL-1206)
+        (field (name Footprint) CRYSTAL:CRYSTAL_1206)
         (field (name Datasheet) "12.5pF 10ppm")
         (field (name Manufacturer) "Micro Crystal AG")
         (field (name "Part Number") "CM7V-T1A 32.768kHz 12.5pF +/-10ppm TA QC")
