@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /Users/warcomeb/Projects/NOWAE/NOWAE029/05-Layout/nowae029/nowae029-0/nowae029.sch)
-    (date "Wednesday, 07 October 2020 at 22:54:33")
+    (date "Wednesday, 07 October 2020 at 23:25:43")
     (tool "Eeschema (5.1.6-0-10_14)")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -1559,6 +1559,7 @@
       (tstamp 5F732808))
     (comp (ref P502)
       (value UART)
+      (footprint CONNECTOR:CONN-STRIP-3x1-2.54)
       (fields
         (field (name Distributor) -)
         (field (name "Distributor Code") -)
@@ -2449,6 +2450,7 @@
       (tstamp 5F7E801F))
     (comp (ref R701)
       (value RESISTOR)
+      (footprint RESISTOR:RESISTOR-1206)
       (fields
         (field (name Distributor) -)
         (field (name "Distributor Code") -)
@@ -2464,6 +2466,7 @@
       (tstamp 5F7E9102))
     (comp (ref R702)
       (value RESISTOR)
+      (footprint RESISTOR:RESISTOR-1206)
       (fields
         (field (name Distributor) -)
         (field (name "Distributor Code") -)
