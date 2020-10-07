@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 6
+Sheet 4 7
 Title "Small Christmas Tree - Gadget 2020"
 Date ""
 Rev "0-D"
@@ -305,4 +305,18 @@ Wire Wire Line
 	4650 4900 4650 4850
 Text HLabel 4900 4900 2    50   Output ~ 0
 BATTERY_STATUS
+$Comp
+L power:+VDD #PWR?
+U 1 1 5F7FADFE
+P 5350 3250
+F 0 "#PWR?" H 5350 3175 30  0001 C CNN
+F 1 "+VDD" V 5350 3352 30  0000 L CNN
+F 2 "" H 5350 3250 60  0000 C CNN
+F 3 "" H 5350 3250 60  0000 C CNN
+	1    5350 3250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5350 3250 5300 3250
+Connection ~ 5300 3250
 $EndSCHEMATC
