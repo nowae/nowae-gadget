@@ -1,4 +1,4 @@
-update=Monday, 05 October 2020 at 13:54:36
+update=Friday, 09 October 2020 at 08:50:05
 version=1
 last_client=kicad
 [general]
@@ -24,7 +24,7 @@ LabSize=50
 ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
-PageLayoutDescrFile=
+PageLayoutDescrFile=${KINOWAE}/nowae-a4.kicad_wks
 LastNetListRead=nowae029.net
 CopperLayerCount=2
 BoardThickness=1.6
@@ -77,7 +77,7 @@ OthersTextUpright=1
 SolderMaskClearance=0.05
 SolderMaskMinWidth=0
 SolderPasteClearance=0
-SolderPasteRatio=-0
+SolderPasteRatio=0
 [pcbnew/Layer.F.Cu]
 Name=F.Cu
 Type=0
