@@ -6,12 +6,12 @@ encoding utf-8
 Sheet 6 7
 Title "Small Christmas Tree - Gadget 2020"
 Date ""
-Rev "0-D"
+Rev "0"
 Comp ""
 Comment1 "M. Giammarini"
 Comment2 "N. Orlandini"
 Comment3 "M. Giammarini"
-Comment4 "2020-09-xx"
+Comment4 "2020-10-09"
 $EndDescr
 Wire Wire Line
 	5150 3150 5600 3150
