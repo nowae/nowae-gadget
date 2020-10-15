@@ -11,7 +11,7 @@ Comp ""
 Comment1 "M. Giammarini"
 Comment2 "N. Orlandini"
 Comment3 "M. Giammarini"
-Comment4 "2020-10-xx"
+Comment4 "2020-10-15"
 $EndDescr
 Wire Wire Line
 	6200 3200 6650 3200
