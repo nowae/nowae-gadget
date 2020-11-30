@@ -1,0 +1,9 @@
+[submodule "06-Firmware/ChristmasTreeGadget2020/hal/libohiboard"]
+	path = 06-Firmware/ChristmasTreeGadget2020/hal/libohiboard
+	url = https://github.com/ohilab/libohiboard.git
+[submodule "06-Firmware/ChristmasTreeGadget2020/scheduler/wets"]
+	path = 06-Firmware/ChristmasTreeGadget2020/scheduler/wets
+	url = https://github.com/warcomeb/wets.git
+[submodule "06-Firmware/ChristmasTreeGadget2020/modules/wcdli"]
+	path = 06-Firmware/ChristmasTreeGadget2020/modules/wcdli
+	url = https://github.com/warcomeb/wcdli.git
