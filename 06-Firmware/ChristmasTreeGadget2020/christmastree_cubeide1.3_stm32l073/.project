@@ -42,9 +42,19 @@
 			<locationURI>PARENT-1-PROJECT_LOC/hal</locationURI>
 		</link>
 		<link>
+			<name>modules</name>
+			<type>2</type>
+			<locationURI>PARENT-1-PROJECT_LOC/modules</locationURI>
+		</link>
+		<link>
 			<name>profiles</name>
 			<type>2</type>
 			<locationURI>PARENT-1-PROJECT_LOC/profiles</locationURI>
+		</link>
+		<link>
+			<name>scheduler</name>
+			<type>2</type>
+			<locationURI>PARENT-1-PROJECT_LOC/scheduler</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -20,7 +20,7 @@ extern "C" {
 
 #define FIRMWARE_VERSION_MAJOR             1
 #define FIRMWARE_VERSION_MINOR             0
-#define FIRMWARE_VERSION_BUG               0
+#define FIRMWARE_VERSION_SUBMINOR          0
 #define FIRMWARE_VERSION_TIME              0
 
 static const Utility_Version_t FIRMWARE_VERSION =
