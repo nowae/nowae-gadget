@@ -7,3 +7,6 @@
 [submodule "06-Firmware/ChristmasTreeGadget2020/modules/wcdli"]
 	path = 06-Firmware/ChristmasTreeGadget2020/modules/wcdli
 	url = https://github.com/warcomeb/wcdli.git
+[submodule "06-Firmware/ChristmasTreeGadget2020/hal/driver/TCA9554"]
+	path = 06-Firmware/ChristmasTreeGadget2020/hal/driver/TCA9554
+	url = https://github.com/warcomeb/TCA9554.git
