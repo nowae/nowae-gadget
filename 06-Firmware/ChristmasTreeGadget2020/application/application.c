@@ -8,6 +8,7 @@
 
 #include "application.h"
 #include "driver.h"
+#include "wets.h"
 
 // GPIOExpander controller
 GPIOExpander_Device_t mLedBranch1;

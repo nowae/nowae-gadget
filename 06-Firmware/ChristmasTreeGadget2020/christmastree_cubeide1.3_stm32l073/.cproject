@@ -31,6 +31,7 @@
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../hal/libohiboard/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../profiles&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../hal/driver&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../scheduler/wets&quot;"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.option.definedsymbols.939603523" name="Define symbols (-D)" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.option.definedsymbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="LIBOHIBOARD_STM32L073CxT"/>
@@ -58,6 +59,7 @@
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../application&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Drivers/CMSIS/Include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../hal/driver&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../scheduler/wets&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.1540992684" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>

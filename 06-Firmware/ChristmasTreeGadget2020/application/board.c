@@ -8,6 +8,7 @@
 
 #include "board.h"
 #include "firmware.h"
+#include "wets.h"
 
 static LowPowerTimer_Config mTimerConfig =
 {
@@ -77,14 +78,13 @@ static void initI2C (void)
 static void initTimer (void)
 {
     // Add callback to Low-Power Timer configuration
-    // FIXME!
-//    mTimerConfig.counterCallback = (LowPowerTimer_CounterCallback)WETS_timerIsrCallback;
+    mTimerConfig.counterCallback = (LowPowerTimer_CounterCallback)WETS_timerIsrCallback;
 
     // Configure Low-Power Timer
     LowPowerTimer_init(OB_LPTIM1,&mTimerConfig);
 
     // Compute tiks and set prescaler...
-    LowPowerTimer_startCounter(OB_LPTIM1,328);
+    LowPowerTimer_startCounter(OB_LPTIM1,SCHEDULER_DEFAULT_PRESCALER);
 }
 
 static void initGpio (void)

@@ -6,10 +6,10 @@
  *   Marco Giammarini <m.giammarini@warcomeb.it>
  */
 
-
-//#include "./scheduler/wets/wets.h"
 #include "board.h"
 #include "firmware.h"
+
+#include "application.h"
 
 int main (void)
 {
