@@ -49,7 +49,19 @@ extern "C" {
 #define BRANCH_EXT_LED_DEVICE_SCL_PIN  GPIO_PINS_PB11
 #define BRANCH_EXT_LED_DEVICE_SDA_PIN  GPIO_PINS_PB10
 
+#define STAR_PIN                       GPIO_PINS_PA5
+#define STAR_ON()                      Gpio_set(STAR_PIN);
+#define STAR_OFF()                     Gpio_clear(STAR_PIN);
+
+#if defined (LIBOHIBOARD_UART)
+#define COMM_DEBUG_DEVICE              OB_UART1
+#define COMM_DEBUG_DEVICE_RX           UART_PINS_PA10
+#define COMM_DEBUG_DEVICE_TX           UART_PINS_PA9
+#define COMM_DEBUG_DEVICE_RX_PIN       GPIO_PINS_PA10
+#define COMM_DEBUG_DEVICE_TX_PIN       GPIO_PINS_PA9
 #endif
+
+#endif // (BOARD_VERSION == 0)
 
 void Board_init (void);
 
