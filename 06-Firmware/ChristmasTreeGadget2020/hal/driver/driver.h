@@ -9,6 +9,6 @@
 #ifndef DRIVER_H
 #define DRIVER_H
 
-#include "TCA9554/TCA9554.h"
+#include "TCA9554/gpioexpander.h"
 
 #endif // DRIVER_H

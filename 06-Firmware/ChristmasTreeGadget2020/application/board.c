@@ -7,6 +7,7 @@
  */
 
 #include "board.h"
+#include "firmware.h"
 
 static LowPowerTimer_Config mTimerConfig =
 {
@@ -42,6 +43,37 @@ static void initClock (void)
     Clock_init(&clockConfig);
 }
 
+static void initI2C (void)
+{
+    // The configuration is the same for both channel!
+    // Only the pins change!
+    Iic_Config iicConfig =
+    {
+        .sclPin      = BRANCH_LED_DEVICE_SCL,
+        .sdaPin      = BRANCH_LED_DEVICE_SDA,
+
+        .baudrate    = 100000,
+        .devType     = IIC_MASTER_MODE,
+        .addressMode = IIC_SEVEN_BIT,
+
+        .pullupEnable = FALSE,
+
+        .clockSource  = IIC_CLOCKSOURCE_SYSCLK,
+    };
+
+    Iic_init(BRANCH_LED_DEVICE,&iicConfig);
+
+#if (LED_BRANCH_EXT_ENABLED == 1)
+
+    iicConfig.sclPin = BRANCH_EXT_LED_DEVICE_SCL;
+    iicConfig.sclPin = BRANCH_EXT_LED_DEVICE_SDA;
+
+    Iic_init(BRANCH_EXT_LED_DEVICE,&iicConfig);
+
+#endif
+
+}
+
 static void initTimer (void)
 {
     // Add callback to Low-Power Timer configuration
@@ -64,5 +96,6 @@ void Board_init (void)
 {
     initClock();
     initTimer();
+    initI2C();
     initGpio();
 }

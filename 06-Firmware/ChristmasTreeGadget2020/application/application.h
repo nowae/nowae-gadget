@@ -6,17 +6,14 @@
  *   Marco Giammarini <m.giammarini@warcomeb.it>
  */
 
+#ifndef APPLICATION_H
+#define APPLICATION_H
 
-//#include "./scheduler/wets/wets.h"
 #include "board.h"
 #include "firmware.h"
 
-int main (void)
-{
-    Board_init();
-    Application_init();
+void Application_init (void);
 
-    Application_loop();
+void Application_loop (void);
 
-    return 0;
-}
+#endif // APPLICATION_H
