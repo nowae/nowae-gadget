@@ -92,10 +92,29 @@ void Application_init (void)
     mLedBranch2.right[11] = GPIOEXPANDER_PINS_8_4;
 #endif
 
+#if 0
+    for (uint8_t i = 0; i < 12; ++i)
+    {
+        GPIOExpander_config(mLedBranch1.ctrl,mLedBranch1.left[i],GPIOEXPANDER_TYPE_OUTPUT);
+        GPIOExpander_config(mLedBranch1.ctrl,mLedBranch1.right[i],GPIOEXPANDER_TYPE_OUTPUT);
+#if (LED_BRANCH_EXT_ENABLED == 1)
+        GPIOExpander_config(mLedBranch2.ctrl,mLedBranch2.left[i],GPIOEXPANDER_TYPE_OUTPUT);
+        GPIOExpander_config(mLedBranch2.ctrl,mLedBranch2.right[i],GPIOEXPANDER_TYPE_OUTPUT)
+#endif
+    }
+#endif
+
+    GPIOExpander_config(mLedBranch1.ctrl,mLedBranch1.left[0],GPIOEXPANDER_TYPE_OUTPUT);
 }
 
 void Application_loop (void)
 {
-
+    while (1)
+    {
+        GPIOExpander_set(mLedBranch1.ctrl,mLedBranch1.left[0]);
+        System_delay(500);
+        GPIOExpander_clear(mLedBranch1.ctrl,mLedBranch1.left[0]);
+        System_delay(500);
+    }
 }
 
