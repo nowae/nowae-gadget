@@ -50,16 +50,22 @@ static void initI2C (void)
     // Only the pins change!
     Iic_Config iicConfig =
     {
-        .sclPin      = BRANCH_LED_DEVICE_SCL,
-        .sdaPin      = BRANCH_LED_DEVICE_SDA,
+        .sclPin          = BRANCH_LED_DEVICE_SCL,
+        .sdaPin          = BRANCH_LED_DEVICE_SDA,
 
-        .baudrate    = 100000,
-        .devType     = IIC_MASTER_MODE,
-        .addressMode = IIC_SEVEN_BIT,
+        .baudrate        = 100000,
+        .devType         = IIC_MASTER_MODE,
+        .addressMode     = IIC_SEVEN_BIT,
 
-        .pullupEnable = FALSE,
+        .pullupEnable    = FALSE,
 
-        .clockSource  = IIC_CLOCKSOURCE_SYSCLK,
+        .address1        = 0,
+        .address2        = 0,
+        .dualAddressMode = IIC_DUALADDRESS_DISABLE,
+        .dualAddressMask = IIC_DUALADDRESSMASK_NO_MASK,
+        .noStretch       = IIC_NOSTRETCH_DISABLE,
+
+        .clockSource     = IIC_CLOCKSOURCE_SYSCLK,
     };
 
     Iic_init(BRANCH_LED_DEVICE,&iicConfig);
